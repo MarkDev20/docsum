@@ -1,0 +1,29 @@
+Digital Signature Module — Project Kickoff Notes
+
+Date: 2026-09-15
+Attendees: Project lead, backend developer, HR representative
+
+We agreed to build a transversal digital signature module integrated with
+the existing ERP. The first phase (MVP) focuses on a single document type:
+the "Adjudicação" document in the Obras module.
+
+The module is split into three areas: a configuration screen where an
+admin defines which document types trigger a signature request and who
+signs; a global dashboard listing every signature request across all
+modules with its current status; and a contextual block embedded directly
+in the source document's screen, showing the signature status without
+requiring the user to navigate elsewhere.
+
+Signers can be defined three ways: a fixed person, a role resolved at
+request time, or a field taken dynamically from the source document
+itself (for example, the supplier named on a purchase order).
+
+Action items: the backend developer will prototype the chosen e-signature
+provider's API in isolation before touching the main platform, to confirm
+it returns all required audit data. The HR representative will confirm
+whether a blocking rule ("cannot advance to Adjudicada without a completed
+signature") is needed in phase 1 or can wait for phase 2. The project lead
+will schedule a follow-up review in two weeks.
+
+Out of scope for phase 1: qualified signatures via an external
+certification provider, and complex multi-branch approval flows.
